@@ -7,13 +7,13 @@
 
 이때, 메시지를 전달받고 중계하는 중간지점 역할 → `브로커(Broker)`
 
-<img src="./img/figure1-1.png" height="70%" width="70%">
+<img src="./img/figure1-2.png" height="50%" width="50%">
 
 ⬇
 
 <figure class="half">  
-    <img src="./img/figure1-3.png" height="70%" width="70%"></a>  
-    <img src="./img/figure1-4.png" height="70%" width="70%"></a>  
+    <img src="./img/figure1-3.png" height="50%" width="50%"></a>  
+    <img src="./img/figure1-4.png" height="50%" width="50%"></a>  
 </figure>
 <br>
 <br>
@@ -61,11 +61,11 @@ Pub → Sub 의 하나의 데이터 흐름
 
 #### 프로듀서 & 컨슈머
 <!-- ![Producer](./img/figure1-5.png) -->
-<img src="./img/figure1-5.png" height="70%" width="70%"> <br>
+<img src="./img/figure1-5.png" height="50%" width="50%"> <br>
 프로듀서 : 새로운 메시지를 생성하고, 토픽에 속한 파티션들 사이에 고르게 나눠서 씀
 
 <!-- ![Consumer](./img/figure1-6.png) -->
-<img src="./img/figure1-6.png" height="70%" width="70%"> <br>
+<img src="./img/figure1-6.png" height="50%" width="50%"> <br>
 컨슈머: 메시지를 읽음, 메시지의 오프셋(offset)을 기록하여 어느 메시지까지 읽은 지 기록
 <br>
 <br>
