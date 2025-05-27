@@ -195,10 +195,10 @@ System.out.println("Controller: " + cluster.controller().get());
 
 ### 고급 어드민 작업 (개념 요약)
 
-- **토픽에 파티션 추가**: `createPartitions()` 사용. 기존 파티션 키 배분 방식에 영향 줄 수 있으므로 주의
-- **토픽에서 레코드 삭제**: `deleteRecords()` 사용. 특정 오프셋 이전 레코드 삭제 표시 (실제 디스크 삭제는 비동기)
-- **리더 선출**: `electLeaders()` 사용. 선호 리더 선출(PREFERRED) 또는 언클린 리더 선출(UNCLEAN - 데이터 유실 가능성)
-- **레플리카 재할당**: `alterPartitionReassignments()` 사용. 브로커 간 데이터 이동 발생
+- **토픽에 파티션 추가**: `createPartitions()` 사용, 기존 파티션 키 배분 방식에 영향 줄 수 있으므로 주의
+- **토픽에서 레코드 삭제**: `deleteRecords()` 사용, 특정 오프셋 이전 레코드 삭제 표시 (실제 디스크 삭제는 비동기)
+- **리더 선출**: `electLeaders()` 사용, 선호 리더 선출(PREFERRED) 또는 언클린 리더 선출(UNCLEAN - 데이터 유실 가능성)
+- **레플리카 재할당**: `alterPartitionReassignments()` 사용, 브로커 간 데이터 이동 발생
 
 <br>
 
@@ -225,8 +225,8 @@ public class TopicCreator {
 @Test
 public void testCreateTestTopicWithMock() throws Exception {
     Node broker = new Node(0, "localhost", 9092);
-    // MockAdminClient spy/mock 설정은 복잡할 수 있어 간략화.
-    // 실제 사용 시에는 필요한 메서드 mock 필요.
+    // MockAdminClient spy/mock 설정은 복잡할 수 있어 간략화
+    // 실제 사용 시에는 필요한 메서드 mock 필요
     try (AdminClient mockAdmin = new MockAdminClient(Collections.singletonList(broker), broker)) {
         TopicCreator tc = new TopicCreator(mockAdmin);
         String testTopicName = "test.new.topic";
