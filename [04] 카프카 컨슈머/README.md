@@ -205,6 +205,7 @@ while (true) {
      - 단점: 커밋 실패 시 재시도 불가
 
 **주의사항**
+
 <img src="./img/figure4-8.png" width="50%" height="50%">
 
 - 오프셋 커밋 < 처리 완료: 메시지 중복 처리
