@@ -144,6 +144,7 @@ producer.send(record, new DemoProducerCallback());
 
 **타임아웃 관련 설정**
 메시지 전달 기간:
+
 <img src="./img/figure3-2.png" width="70%" height="70%">
 
 ```java
@@ -263,6 +264,7 @@ Updated schema:
 - 기존 데이터와의 호환성 유지
 
 **스키마 레지스트리**
+
 <img src="./img/figure3-3.png" width="50%" height="50%">
 
 스키마 레지스트리 역할:
